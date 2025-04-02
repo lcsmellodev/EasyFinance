@@ -3,12 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace EasyFinances;
 
-public class Titular
+public class Usuario
 {
     
     [MaxLength(14)]
     public string CPF { get; set; }
-    public ContaBancaria ContaBancaria{ get; set; }
     private string _primeiroNome { get;  set; }
     private string _sobrenome{ get; set;}
 
@@ -19,6 +18,7 @@ public class Titular
 
     //Mapeamentos
    
+    public ContaBancaria ContaBancaria{ get; set; }
    public ICollection<ContaBancaria> ContasBancarias { get; set; }
     
     

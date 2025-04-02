@@ -3,7 +3,10 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace EasyFinances.Model;
 
-public class Pessoa
+public abstract class Pessoa
 {
-    public string RazaoSocial { get; set; }
+    public Guid Id { get; set; }
+
+    public ICollection<Lancamento> Lancamentos { get; set; } 
+
 }

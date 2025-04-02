@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using EasyFinances.Model;
 
 namespace EasyFinances;
 
-public class Lancamento
+public abstract class Lancamento
 {
     public Guid Id { get; set; }
     public DateTime Data { get; set;}
@@ -11,6 +12,12 @@ public class Lancamento
     //Mapeamentos
     public Guid ContaBancariaId { get ;set;}
     public ContaBancaria ContaBancaria { get; set; }
+
+    public Categoria Categoria { get; set; }
+    public Guid CategoriaId { get; set; }
+
+    public Pessoa Pessoa { get; set; }
+    public Guid PessoaId { get; set; }
 
 
 }
